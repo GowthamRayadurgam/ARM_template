@@ -15,8 +15,8 @@ steps:
     SourcePath: '$(Pipeline. Workspace)'
     azureSubscription: 'ARM RSG service connection'
     Destination: 'AzureBlob'
-    storage: 'https://armtemplatedeployment.blob.core.windows.net/arm-template'
-    ContainerName: 'arm-template'
+    storage: 'armtemplatedeployment'
+    ContainerName: 'armtemplate'
   name: AzureFileCopy
 
 
