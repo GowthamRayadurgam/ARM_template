@@ -10,13 +10,25 @@ pool:
   vmImage: windows-latest
 
 steps:
-- task: AzureFileCopy@4
+#- task: AzureFileCopy@4
+#  inputs:
+#    SourcePath: '$(Pipeline. Workspace)'
+#    azureSubscription: 'ARM RSG service connection'
+#    Destination: 'AzureBlob'
+#    storage: 'armtemplatedeployment'
+#    ContainerName: 'armtemplate'
+#  name: AzureFileCopy
+
+
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    SourcePath: '$(Pipeline. Workspace)'
-    azureSubscription: 'ARM RSG service connection'
-    Destination: 'AzureBlob'
-    storage: 'armtemplatedeployment'
-    ContainerName: 'armtemplate'
-  name: AzureFileCopy
-
-
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'ARM RSG service connection'
+    subscriptionId: '3bfbed38-73ee-486e-b212-d758a975a66c'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ARM'
+    location: 'Central India'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://armtemplatedeployment.blob.core.windows.net/armtemplate/template.json'
+    csmParametersFileLink: 'https://armtemplatedeployment.blob.core.windows.net/armtemplate/parameters.json'
+    deploymentMode: 'Incremental'
