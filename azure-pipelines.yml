@@ -29,6 +29,6 @@ steps:
     resourceGroupName: 'ARM'
     location: 'Central India'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://armtemplatedeployment.blob.core.windows.net/armtemplate/template.json?sp=r&st=2022-11-23T16:51:22Z&se=2022-11-24T00:51:22Z&spr=https&sv=2021-06-08&sr=b&sig=24en6CiOcgOVV07%2FeJvX1%2FgsshE%2BH3v2gTV2uVncXQM%3D'
+    csmFileLink: 'https://armtemplatedeployment.blob.core.windows.net/armtemplate/template.json?sp=r&st=2022-11-23T16:56:33Z&se=2022-11-24T00:56:33Z&spr=https&sv=2021-06-08&sr=b&sig=6lFYLe%2FtDdPTFdT4uS4MQ0c80SXWb6hWLRuQlyCBpm0%3D'
     csmParametersFileLink: 'https://armtemplatedeployment.blob.core.windows.net/armtemplate/parameters.json?sp=r&st=2022-11-23T16:10:47Z&se=2022-11-24T00:10:47Z&spr=https&sv=2021-06-08&sr=b&sig=WZqN1F8yDdrUGj4bOpyEVojfNDYFzj9Q6yegfEBHdVc%3D'
     deploymentMode: 'Incremental'
